@@ -39,6 +39,11 @@ span {
 }
 
 .image {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(245, 246, 252, 0.52),
+    rgba(117, 19, 93, 0.73)
+  );
   object-fit: cover;
   object-position: center;
   width: 100%;
@@ -88,7 +93,7 @@ button[type="submit"] {
 }
 
 /* Responsividade */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .container {
     flex-direction: column;
     align-items: center;
@@ -104,6 +109,6 @@ button[type="submit"] {
   }
 
   .image {
-    max-width: 150px;
+    display: none;
   }
 }
