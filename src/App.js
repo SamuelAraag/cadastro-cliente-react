@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import logoImage from "./logo.svg"; // Importe a imagem e ajuste o caminho conforme necessário
-import ImagemBackground from "./assets/background.jpg"; // Importe a imagem e ajuste o caminho conforme necessário
+import ImagemBackground from "./assets/background-otimized.jpg";
 
 const App = () => {
   const [formData, setFormData] = useState({
@@ -17,18 +16,14 @@ const App = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
-    setErrors((prevErrors) => ({ ...prevErrors, [name]: "" })); // Limpa o erro ao digitar no campo
+    setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const validationErrors = validateForm(); // Valida o formulário antes de prosseguir
+    const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
-      // Se não houver erros de validação, prossiga com o envio do formulário
-      console.log(formData);
-      // ... código adicional para enviar os dados do formulário
     } else {
-      // Se houver erros de validação, atualize o estado de erros
       setErrors(validationErrors);
     }
   };
@@ -36,23 +31,19 @@ const App = () => {
   const validateForm = () => {
     const errors = {};
 
-    // Validação do campo Nome Completo
     if (formData.fullName.trim() === "") {
       errors.fullName = "Por favor, informe o nome completo";
     }
 
-    // Validação do campo Email
     const emailRegex = /^\S+@\S+\.\S+$/;
     if (!emailRegex.test(formData.email)) {
       errors.email = "Por favor, informe um email válido";
     }
 
-    // Validação do campo Senha
     if (formData.password.length < 6) {
       errors.password = "A senha deve ter pelo menos 6 caracteres";
     }
 
-    // Validação do campo Confirmação de Senha
     if (formData.confirmPassword !== formData.password) {
       errors.confirmPassword = "As senhas não coincidem";
     }
