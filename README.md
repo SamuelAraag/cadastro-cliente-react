@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<img src="https://raw.githubusercontent.com/SamuelAraag/cadastro-cliente-react/main/src/assets/captura-tela/react-tela-cadastro.png"></img>
+<img src="https://raw.githubusercontent.com/SamuelAraag/cadastro-cliente-react/main/src/assets/captura-tela/react-tela-cadastro-2.png"></img>
 
 ## Available Scripts
 
