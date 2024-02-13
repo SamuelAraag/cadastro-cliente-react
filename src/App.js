@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import ImagemBackground from "./assets/background-otimized.jpg";
+import ImagemBackground from "./assets/background-otimizado.jpg";
 
 const App = () => {
   const [formData, setFormData] = useState({
